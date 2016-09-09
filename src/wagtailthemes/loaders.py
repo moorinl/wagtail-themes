@@ -12,7 +12,6 @@ class ThemeLoader(BaseLoader):
 
         if theme:
             theme_dirs = [os.path.join(dir, theme) for dir in dirs]
-            print theme_dirs
             return theme_dirs
 
         return dirs
