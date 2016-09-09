@@ -107,7 +107,7 @@ WAGTAIL_THEMES = [
 
 ## ThemeLoader
 
-The `ThemeLoader` class search for files in your (see settings above) defined
+The `ThemeLoader` class searches for files in your (see settings above) defined
 `DIRS` config for `TEMPLATES`.
 
 In this case templates files will be found in the following order (for this
