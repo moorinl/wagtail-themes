@@ -2,8 +2,8 @@ from setuptools import find_packages, setup
 
 
 install_requires = [
-    'django==1.10',
-    'wagtail==1.6.2',
+    'django>=1.8',
+    'wagtail>=1.2'
 ]
 
 setup(
@@ -23,6 +23,6 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-    ],
+        'Programming Language :: Python :: 3.5'
+    ]
 )
