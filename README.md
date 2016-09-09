@@ -15,7 +15,7 @@ Install the package
 pip install pip install git+https://github.com/moorinteractive/wagtail-themes.git
 ```
 
-Add `wagtail-themes` to your `INSTALLED_APPS`
+Add `wagtailthemes` to your `INSTALLED_APPS`
 
 ```python
 INSTALLED_APPS = [
@@ -64,7 +64,7 @@ MIDDLEWARE_CLASSES = [
 ]
 ```
 
-Now make sure the `ThemeLoader` is added your `loaders` config in the setting
+Now make sure the `ThemeLoader` is added to your `loaders` config in the setting
 `TEMPLATES`. Note that Django by default adds `APP_DIRS` to the setting, which
 conflicts with defining your custom `loaders` config.
 
@@ -78,6 +78,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
         ],
+        # Remove 'APP_DIRS': True at this position
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
