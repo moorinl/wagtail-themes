@@ -12,7 +12,7 @@ Site specific theme loader for Django Wagtail.
 Install the package
 
 ```
-pip install pip install git+https://github.com/moorinteractive/wagtail-themes.git
+pip install git+https://github.com/moorinteractive/wagtail-themes.git
 ```
 
 Add `wagtailthemes` to your `INSTALLED_APPS`
