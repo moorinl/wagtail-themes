@@ -1,4 +1,4 @@
-## [Unreleased] - 2016-09-09
+## [0.1.1] - 2016-09-09
 ### Fixed
 * Prevent making migrations when changing `WAGTAIL_THEMES` (issue [#2])
 
@@ -6,5 +6,5 @@
 ### Added
 * Initial prototype
 
-[Unreleased]: https://github.com/moorinteractive/wagtail-themes/compare/0.1...HEAD
+[0.1.1]: https://github.com/moorinteractive/wagtail-themes/compare/0.1...0.1.1
 [#2]: https://github.com/moorinteractive/wagtail-themes/issues/2

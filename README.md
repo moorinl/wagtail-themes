@@ -4,11 +4,6 @@ Site specific theme loader for Django Wagtail.
 
 ![ThemeSettings](docs/screenshot.jpg)
 
-## Status
-
-* Proof of Concept
-* Under development
-
 ## Installation
 
 Install the package
