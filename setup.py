@@ -9,7 +9,7 @@ install_requires = [
 
 setup(
     name='wagtail-themes',
-    version='0.1.2',
+    version='0.1.3',
     description='Site specific theme loader for Django Wagtail.',
     author='Rob Moorman',
     author_email='rob@moori.nl',

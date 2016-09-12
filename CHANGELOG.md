@@ -1,3 +1,7 @@
+## [0.1.3] - 2016-09-12
+### Fixed
+* Backwards compatibility with Django 1.10 new middleware classes (issue [#1])
+
 ## [0.1.2] - 2016-09-12
 ### Fixed
 * Missing README.md when installing from pypi
@@ -10,6 +14,8 @@
 ### Added
 * Initial prototype
 
+[0.1.3]: https://github.com/moorinteractive/wagtail-themes/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/moorinteractive/wagtail-themes/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/moorinteractive/wagtail-themes/compare/0.1...0.1.1
 [#2]: https://github.com/moorinteractive/wagtail-themes/issues/2
+[#1]: https://github.com/moorinteractive/wagtail-themes/issues/1
