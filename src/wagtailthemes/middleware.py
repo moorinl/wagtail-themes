@@ -1,10 +1,11 @@
 from django.core.exceptions import ImproperlyConfigured
+from django.utils.deprecation import MiddlewareMixin
 
 from wagtailthemes.models import ThemeSettings
 from wagtailthemes.thread import set_theme
 
 
-class ThemeMiddleware(object):
+class ThemeMiddleware(MiddlewareMixin):
     def process_request(self, request):
         if not request.site:
             raise ImproperlyConfigured(
