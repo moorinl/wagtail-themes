@@ -7,6 +7,7 @@ from wagtail.wagtailadmin.edit_handlers import FieldPanel
 
 __ALL__ = ['ThemeSettings']
 
+
 @register_setting
 class ThemeSettings(BaseSetting):
     THEMES = getattr(settings, 'WAGTAIL_THEMES', None)
