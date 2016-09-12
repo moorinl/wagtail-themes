@@ -1,0 +1,24 @@
+[
+{
+  "model": "wagtailthemes.themesettings",
+  "pk": 1,
+  "fields": {
+    "site": [
+      "example.com",
+      80
+    ],
+    "theme": "brand"
+  }
+},
+{
+  "model": "wagtailthemes.themesettings",
+  "pk": 2,
+  "fields": {
+    "site": [
+      "blog.example.com",
+      80
+    ],
+    "theme": "blog"
+  }
+}
+]
