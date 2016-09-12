@@ -7,14 +7,10 @@ install_requires = [
     'wagtail>=1.2'
 ]
 
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
-
 setup(
     name='wagtail-themes',
     version='0.1.1',
     description='Site specific theme loader for Django Wagtail.',
-    long_description=read('README.md'),
     author='Rob Moorman',
     author_email='rob@moori.nl',
     url='https://github.com/moorinteractive/wagtail-themes',
