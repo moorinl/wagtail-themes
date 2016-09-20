@@ -1,6 +1,7 @@
 from django import forms
 from django.conf import settings
 from django.db import models
+from django.utils.translation import ugettext as _
 from wagtail.contrib.settings.models import BaseSetting, register_setting
 from wagtail.wagtailadmin.edit_handlers import FieldPanel
 
@@ -17,3 +18,7 @@ class ThemeSettings(BaseSetting):
     panels = [
         FieldPanel('theme', widget=forms.Select(choices=THEMES))
     ]
+
+    class Meta:
+        verbose_name = _('themes')
+        verbose_name_plural = _('themes')
