@@ -99,6 +99,13 @@ TEMPLATES = [
 ]
 ```
 
+Now select where your themes are stored with `WAGTAIL_THEME_PREFIX` which has
+a default value of `themes`.
+
+```python
+THEME_DIR = 'mythemes'
+```
+
 Finally define your to be used themes in the setting `WAGTAIL_THEMES`
 
 ```python
@@ -116,7 +123,7 @@ The `ThemeLoader` class searches for files in your (see settings above) defined
 In this case templates files will be found in the following order (for this
 example code we have set `brand` as theme in our CMS)
 
-1. /myapp/templates/brand/
+1. /myapp/templates/mythemes/brand/
 2. /myapp/templates/
 
 Its wise to build your templates as you are used to and only override the
