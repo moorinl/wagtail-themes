@@ -7,7 +7,7 @@ install:
   - pip install coveralls
   - pip install -e .[test]
 script:
-  - pytest --cov=wagtailthemes --cov-report=xml
+  - py.test --cov=wagtailthemes --cov-report=xml
   - flake8 src/
 after_success:
   - coveralls
