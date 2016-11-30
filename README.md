@@ -9,13 +9,11 @@ Site specific theme loader for Django Wagtail.
 * Testing: [https://travis-ci.org/moorinteractive/wagtail-themes](https://travis-ci.org/moorinteractive/wagtail-themes)
 * Coverage: [https://coveralls.io/github/moorinteractive/wagtail-themes](https://coveralls.io/github/moorinteractive/wagtail-themes)
 
-![ThemeSettings](docs/screenshot.jpg)
-
 ## Example app
 
 See the [example](https://github.com/moorinteractive/wagtail-themes/tree/master/example) app for a working multisite with two different themes.
 
-Run `make` and the app will install all the necessary files and fixtures for you. 
+Run `make` and the app will install all the necessary files and fixtures for you. You can login with `admin:admin` and check how `example.com` and `blog.example.com` serve different themes.
 
 ## Installation
 

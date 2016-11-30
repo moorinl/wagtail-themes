@@ -25,7 +25,7 @@ SECRET_KEY = '_vyer8o8)0jv9xbwmq8vf)9j(*#plkr+pryg*@0j9*tg5p(6ze'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -148,6 +148,7 @@ WAGTAIL_SITE_NAME = 'Example'
 # Wagtail themes
 # https://github.com/moorinteractive/wagtail-themes
 
+WAGTAIL_THEME_PATH = 'themes'
 WAGTAIL_THEMES = [
     ('brand', 'Brand site'),
     ('blog', 'Blog page')
