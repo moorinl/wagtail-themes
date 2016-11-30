@@ -118,5 +118,6 @@ WAGTAIL_SITE_NAME = 'Wagtail Themes'
 
 WAGTAIL_THEME_PATH = None
 WAGTAIL_THEMES = [
-    ('brand', 'Brand site')
+    ('brand', 'Brand site'),
+    ('personal', 'Personal site')
 ]
