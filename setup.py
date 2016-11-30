@@ -1,10 +1,19 @@
-import os
 from setuptools import find_packages, setup
 
 
 install_requires = [
     'django>=1.8',
     'wagtail>=1.2'
+]
+
+test_require = [
+    'factory-boy',
+    'flake8',
+    'isort',
+    'pytest',
+    'pytest-cov',
+    'pytest-django',
+    'wagtail',
 ]
 
 setup(
@@ -16,11 +25,13 @@ setup(
     url='https://github.com/moorinteractive/wagtail-themes',
     license='MIT',
     install_requires=install_requires,
+    extras_require={
+        'test': test_require,
+    },
     package_dir={'': 'src'},
     packages=find_packages('src'),
     include_package_data=True,
     classifiers=[
-        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Operating System :: Unix',

@@ -1,0 +1,13 @@
+sudo: false
+language: python
+python:
+  - "2.7"
+  - "3.5"
+install:
+  - pip install coveralls
+  - pip install -e .[test]
+script:
+  - pytest --cov=wagtailthemes --cov-report=xml
+  - flake8 src/
+after_success:
+  - coveralls
