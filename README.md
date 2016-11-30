@@ -2,6 +2,12 @@
 
 Site specific theme loader for Django Wagtail.
 
+[![Build Status](https://travis-ci.org/moorinteractive/wagtail-themes.svg?branch=master)](https://travis-ci.org/moorinteractive/wagtail-themes)
+
+* Issues: [https://github.com/moorinteractive/wagtail-themes/issues](https://github.com/moorinteractive/wagtail-themes/issues)
+* Testing: [https://travis-ci.org/moorinteractive/wagtail-themes](https://travis-ci.org/moorinteractive/wagtail-themes)
+* Coverage: [https://coveralls.io/github/moorinteractive/wagtail-themes](https://coveralls.io/github/moorinteractive/wagtail-themes)
+
 ![ThemeSettings](docs/screenshot.jpg)
 
 ## Example app
