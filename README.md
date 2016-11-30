@@ -2,6 +2,13 @@
 
 Site specific theme loader for Django Wagtail.
 
+[![Build Status](https://travis-ci.org/moorinteractive/wagtail-themes.svg?branch=master)](https://travis-ci.org/moorinteractive/wagtail-themes)
+[![Coverage Status](https://coveralls.io/repos/github/moorinteractive/wagtail-themes/badge.svg?branch=master)](https://coveralls.io/github/moorinteractive/wagtail-themes?branch=master)
+
+* Issues: [https://github.com/moorinteractive/wagtail-themes/issues](https://github.com/moorinteractive/wagtail-themes/issues)
+* Testing: [https://travis-ci.org/moorinteractive/wagtail-themes](https://travis-ci.org/moorinteractive/wagtail-themes)
+* Coverage: [https://coveralls.io/github/moorinteractive/wagtail-themes](https://coveralls.io/github/moorinteractive/wagtail-themes)
+
 ![ThemeSettings](docs/screenshot.jpg)
 
 ## Example app
@@ -99,12 +106,16 @@ TEMPLATES = [
 ]
 ```
 
-Now select where your themes are stored with `WAGTAIL_THEME_PREFIX` which has
-a default value of `themes`.
+Now select where your themes are stored with the `WAGTAIL_THEME_PATH` settings
+which has a default value of `None`.
 
 ```python
-THEME_DIR = 'mythemes'
+WAGTAIL_THEME_PATH = 'themes'
 ```
+
+Note that the setting `WAGTAIL_THEME_PATH` is optional. We strongly recommend
+using this if you have a large set of themes to keep your template directory
+maintainable.
 
 Finally define your to be used themes in the setting `WAGTAIL_THEMES`
 
@@ -123,7 +134,7 @@ The `ThemeLoader` class searches for files in your (see settings above) defined
 In this case templates files will be found in the following order (for this
 example code we have set `brand` as theme in our CMS)
 
-1. /myapp/templates/mythemes/brand/
+1. /myapp/templates/themes/brand/
 2. /myapp/templates/
 
 Its wise to build your templates as you are used to and only override the

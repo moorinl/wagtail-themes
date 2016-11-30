@@ -5,7 +5,6 @@ from django.utils.translation import ugettext as _
 from wagtail.contrib.settings.models import BaseSetting, register_setting
 from wagtail.wagtailadmin.edit_handlers import FieldPanel
 
-
 __ALL__ = ['ThemeSettings']
 
 
