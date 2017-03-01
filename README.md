@@ -57,7 +57,7 @@ Add `ThemeMiddleware` to your `MIDDLEWARE_CLASSES` and make sure its added
 after `SiteMiddleware`
 
 ```python
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
