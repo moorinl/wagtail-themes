@@ -2,8 +2,8 @@ from setuptools import find_packages, setup
 
 
 install_requires = [
-    'django>=1.8',
-    'wagtail>=1.2'
+    'django>=1.8,<2.0',
+    'wagtail>=1.2,<2.0'
 ]
 
 test_require = [
