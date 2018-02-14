@@ -6,6 +6,7 @@ from wagtailthemes.models import ThemeSettings
 
 register = template.Library()
 
+
 class ThemeStaticNode(StaticNode):
     def url(self, context):
         path = self.path.resolve(context)
@@ -14,6 +15,7 @@ class ThemeStaticNode(StaticNode):
             theme_path = getattr(settings, 'WAGTAIL_THEME_PATH', "")
             path = os.path.join(theme_path, theme_settings.theme, path)
         return self.handle_simple(path)
+
 
 @register.tag('theme_static')
 def do_theme_static(parser, token):
@@ -24,4 +26,3 @@ def do_theme_static(parser, token):
     but if no theme was active it'd just give /static/img/logo.png
     """
     return ThemeStaticNode.handle_token(parser, token)
-
