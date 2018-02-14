@@ -137,3 +137,16 @@ example code we have set `brand` as theme in our CMS)
 
 Its wise to build your templates as you are used to and only override the
 template files you want to customize in your theme.
+
+## theme_static tag
+
+Works just like the standard Django `static` tag, but when a theme is active,
+it will also prefix the theme path.  E.g. If the theme `brand` is active
+`{% theme_static img/logo.png %}` will give /static/theme/brand/img/logo.png
+If no theme was active it'd just be /static/img/logo.png
+
+```python
+{% load theme_static %}
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% theme_static 'img/favicon-144x144.png' %}" />
+```

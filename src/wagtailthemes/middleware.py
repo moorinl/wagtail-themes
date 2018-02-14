@@ -9,15 +9,13 @@ class ThemeMiddleware(MiddlewareMixin):
     def process_request(self, request):
         try:
             site = request.site
-        except:
-            site = None
-
-        if not site:
+        except AttributeError:
             raise ImproperlyConfigured(
                 "ThemeMiddleware must be added after SiteMiddleware")
 
-        theme_settings = ThemeSettings.for_site(site)
-        theme = theme_settings.theme
+        if site:
+            theme_settings = ThemeSettings.for_site(site)
+            theme = theme_settings.theme
 
-        if theme:
-            set_theme(theme)
+            if theme:
+                set_theme(theme)
