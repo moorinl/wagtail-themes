@@ -3,9 +3,15 @@ from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext as _
 from wagtail.contrib.settings.models import BaseSetting, register_setting
-from wagtail.wagtailadmin.edit_handlers import FieldPanel
 
 __ALL__ = ['ThemeSettings']
+
+import wagtail
+
+if wagtail.VERSION >= (2, 0):
+    from wagtail.admin.edit_handlers import FieldPanel
+else:
+    from wagtail.wagtailadmin.edit_handlers import FieldPanel
 
 
 @register_setting
