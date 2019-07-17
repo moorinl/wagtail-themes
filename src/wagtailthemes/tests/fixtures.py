@@ -1,6 +1,6 @@
 import pytest
 from django.test import Client
-from wagtail.wagtailcore.models import Page, Site
+from wagtail.core.models import Page, Site
 
 from wagtailthemes.models import ThemeSettings
 
