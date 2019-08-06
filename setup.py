@@ -17,7 +17,7 @@ test_require = [
 
 setup(
     name='wagtail-themes',
-    version='0.2.0',
+    version='0.3.0',
     description='Site specific theme loader for Django Wagtail.',
     author='Rob Moorman',
     author_email='rob@moori.nl',

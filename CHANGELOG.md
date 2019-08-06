@@ -1,3 +1,11 @@
+## [0.3.0] - 2019-08-06
+### Fixed
+* Compatibility for Django 2.x and Wagtail 2.x
+
+### Removed
+* Support for Django 1.x and Wagtail 1.x
+
+
 ## [0.2.0] - 2016-11-30
 ### Fixed
 * Verbose name of `themes` instead of `Theme settings`
