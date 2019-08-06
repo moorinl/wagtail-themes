@@ -2,8 +2,8 @@ from django import forms
 from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext as _
+from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.contrib.settings.models import BaseSetting, register_setting
-from wagtail.wagtailadmin.edit_handlers import FieldPanel
 
 __ALL__ = ['ThemeSettings']
 

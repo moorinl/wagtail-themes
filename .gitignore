@@ -1,6 +1,8 @@
 __pycache__/
 .cache/
+.vscode/
 .coverage
+.python-version
 coverage.xml
 .DS_Store
 *.sqlite3

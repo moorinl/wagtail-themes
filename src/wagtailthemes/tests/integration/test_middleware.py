@@ -7,11 +7,11 @@ from wagtailthemes.thread import get_theme, set_theme
 
 @pytest.mark.django_db
 def test_middleware_not_configured(client):
-    with override_settings(MIDDLEWARE_CLASSES=[
+    with override_settings(MIDDLEWARE=[
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.middleware.common.CommonMiddleware',
         'wagtailthemes.middleware.ThemeMiddleware',
-        'wagtail.wagtailcore.middleware.SiteMiddleware',
+        'wagtail.core.middleware.SiteMiddleware',
     ]):
         with pytest.raises(ImproperlyConfigured):
             client.get('/')

@@ -9,7 +9,7 @@ class ThemeMiddleware(MiddlewareMixin):
     def process_request(self, request):
         try:
             site = request.site
-        except:
+        except:  # noqa
             site = None
 
         if not site:
