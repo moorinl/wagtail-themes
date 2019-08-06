@@ -9,6 +9,13 @@ Site specific theme loader for Django Wagtail.
 * Testing: [https://travis-ci.org/moorinteractive/wagtail-themes](https://travis-ci.org/moorinteractive/wagtail-themes)
 * Coverage: [https://coveralls.io/github/moorinteractive/wagtail-themes](https://coveralls.io/github/moorinteractive/wagtail-themes)
 
+## Compatibility
+
+* Django >= 2.0
+* Wagtail > =2.0
+
+For older version of Django & Wagtail please use `wagtail-themes==0.2.0`.
+
 ## Example app
 
 See the [example](https://github.com/moorinteractive/wagtail-themes/tree/master/example) app for a working multisite with two different themes.
