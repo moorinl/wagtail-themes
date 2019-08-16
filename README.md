@@ -110,6 +110,8 @@ TEMPLATES = [
 ]
 ```
 
+**Important**: please make sure you don't have `django.template.loaders.cached.Loader` in your loaders.
+
 Now select where your themes are stored with the `WAGTAIL_THEME_PATH` settings
 which has a default value of `None`.
 
