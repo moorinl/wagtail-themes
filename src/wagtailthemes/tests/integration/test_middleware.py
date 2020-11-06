@@ -11,7 +11,7 @@ def test_middleware_not_configured(client):
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.middleware.common.CommonMiddleware',
         'wagtailthemes.middleware.ThemeMiddleware',
-        'wagtail.core.middleware.SiteMiddleware',
+        # 'wagtail.core.middleware.SiteMiddleware',
     ]):
         with pytest.raises(ImproperlyConfigured):
             client.get('/')
