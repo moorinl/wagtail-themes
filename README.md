@@ -60,8 +60,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-Add `ThemeMiddleware` to your `MIDDLEWARE` and make sure its added
-after `SiteMiddleware`
+Add `ThemeMiddleware` to your `MIDDLEWARE`.
 
 ```python
 MIDDLEWARE = [
@@ -72,7 +71,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
     'wagtailthemes.middleware.ThemeMiddleware',
 ]
