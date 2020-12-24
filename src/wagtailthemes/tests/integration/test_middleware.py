@@ -1,18 +1,18 @@
 import pytest
 from django.core.exceptions import ImproperlyConfigured
 from django.test.utils import override_settings
+from wagtail.core.models import Site
 
 from wagtailthemes.thread import get_theme, set_theme
 
 
 @pytest.mark.django_db
-def test_middleware_not_configured(client):
+def test_middleware_no_site(client):
     with override_settings(MIDDLEWARE=[
-        'django.contrib.sessions.middleware.SessionMiddleware',
-        'django.middleware.common.CommonMiddleware',
         'wagtailthemes.middleware.ThemeMiddleware',
-        # 'wagtail.core.middleware.SiteMiddleware',
     ]):
+        # Remove all sites to simulate not being able to find the site.
+        Site.objects.all().delete()
         with pytest.raises(ImproperlyConfigured):
             client.get('/')
 

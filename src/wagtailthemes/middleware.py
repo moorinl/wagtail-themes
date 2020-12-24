@@ -8,10 +8,7 @@ from wagtailthemes.thread import set_theme
 
 class ThemeMiddleware(MiddlewareMixin):
     def process_request(self, request):
-        try:
-            site = Site.find_for_request(request)
-        except:  # noqa
-            site = None
+        site = Site.find_for_request(request)
 
         if not site:
             raise ImproperlyConfigured(
