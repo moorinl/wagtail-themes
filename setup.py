@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 install_requires = [
     'django>=2.0',
-    'wagtail>=2.0'
+    'wagtail>=2.9'
 ]
 
 test_require = [
@@ -17,7 +17,7 @@ test_require = [
 
 setup(
     name='wagtail-themes',
-    version='0.3.0',
+    version='0.4.0',
     description='Site specific theme loader for Django Wagtail.',
     author='Rob Moorman',
     author_email='rob@moori.nl',
@@ -35,8 +35,8 @@ setup(
         'Framework :: Django',
         'Operating System :: Unix',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7'
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
     ]
 )

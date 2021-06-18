@@ -1,5 +1,6 @@
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.deprecation import MiddlewareMixin
+from wagtail.core.models import Site
 
 from wagtailthemes.models import ThemeSettings
 from wagtailthemes.thread import set_theme
@@ -7,14 +8,11 @@ from wagtailthemes.thread import set_theme
 
 class ThemeMiddleware(MiddlewareMixin):
     def process_request(self, request):
-        try:
-            site = request.site
-        except:  # noqa
-            site = None
+        site = Site.find_for_request(request)
 
         if not site:
             raise ImproperlyConfigured(
-                "ThemeMiddleware must be added after SiteMiddleware")
+                "Site not found!")
 
         theme_settings = ThemeSettings.for_site(site)
         theme = theme_settings.theme
