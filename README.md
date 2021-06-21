@@ -11,10 +11,10 @@ Site specific theme loader for Django Wagtail.
 
 ## Compatibility
 
-* Django >= 2.0
-* Wagtail > =2.0
+* Django >= 3.1
+* Wagtail > =2.12
 
-For older version of Django & Wagtail please use `wagtail-themes==0.2.0`.
+For older version of Django & Wagtail please use `wagtail-themes==0.3.0`.
 
 ## Example app
 

@@ -120,3 +120,5 @@ WAGTAIL_THEMES = [
     ('brand', 'Brand site'),
     ('personal', 'Personal site')
 ]
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

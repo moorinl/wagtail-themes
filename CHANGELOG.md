@@ -1,3 +1,10 @@
+## [0.4.0] - 2021-06-18
+### Fixed
+* Compatibility for Django 3.x and Wagtail 2.12+
+
+### Removed
+* Support for Django 2.x and Wagtail 2.12-
+
 ## [0.3.0] - 2019-08-06
 ### Fixed
 * Compatibility for Django 2.x and Wagtail 2.x
