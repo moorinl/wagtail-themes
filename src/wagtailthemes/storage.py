@@ -60,8 +60,11 @@ class StaticFileField(FileField):
         storage=None,
         **kwargs
     ):
-        if not storage:
-            storage = default_static_file_storage
+        self.storage = default_static_file_storage
+        if callable(self.storage):
+            # Hold a reference to the callable for deconstruct().
+            self._storage_callable = self.storage
+            self.storage = self.storage()
         super().__init__(
             verbose_name=verbose_name,
             name=name,
