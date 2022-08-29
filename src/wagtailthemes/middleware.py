@@ -1,8 +1,12 @@
+import logging
+
 from django.core.exceptions import ImproperlyConfigured
 from wagtail.core.models import Site
 
 from wagtailthemes.models import ThemeSettings
 from wagtailthemes.thread import set_theme
+
+logger = logging.getLogger(__name__)
 
 
 class ThemeMiddleware:
@@ -16,7 +20,7 @@ class ThemeMiddleware:
             raise ImproperlyConfigured("Site not found!")
 
         theme_settings = ThemeSettings.for_site(site)
-        theme = theme_settings.theme
+        theme = theme_settings.theme.pathname if theme_settings.theme else ""
 
         if theme is not None:
             set_theme(theme)

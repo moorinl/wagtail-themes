@@ -7,9 +7,9 @@ def test_get_theme():
     assert not get_theme()
 
     # Check when theme is set
-    set_theme('brand')
-    assert get_theme() == 'brand'
+    set_theme("brand")
+    assert get_theme() == "brand"
 
     # Check when theme is overridden
-    set_theme('personal')
-    assert get_theme() == 'personal'
+    set_theme("personal")
+    assert get_theme() == "personal"

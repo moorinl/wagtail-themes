@@ -8,12 +8,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('wagtailthemes', '0001_initial'),
+        ("wagtailthemes", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='themesettings',
-            options={'verbose_name': 'themes', 'verbose_name_plural': 'themes'},
+            name="themesettings",
+            options={"verbose_name": "themes", "verbose_name_plural": "themes"},
         ),
     ]

@@ -6,7 +6,12 @@ install_requires = [
     'wagtail>=2.12'
 ]
 
-test_require = [
+aws_requires = [
+    'django-storages>=1.12',
+]
+
+test_requires = [
+    'black',
     'flake8',
     'isort',
     'pytest',
@@ -25,7 +30,8 @@ setup(
     license='MIT',
     install_requires=install_requires,
     extras_require={
-        'test': test_require,
+        'aws': aws_requires,
+        'test': test_requires,
     },
     package_dir={'': 'src'},
     packages=find_packages('src'),

@@ -7,13 +7,17 @@ clean:
 flake8:
 	flake8 src/
 
+format:
+	black src
+	isort src
+
 install:
 	pip install -e .[test]
 
-isort:
-	isort --check-only --diff --recursive src/
-
-lint: flake8 isort
+lint:
+	black --check --diff src
+	isort --check-only --diff src
+	flake8 src
 
 test:
 	py.test

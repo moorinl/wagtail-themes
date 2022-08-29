@@ -7,7 +7,7 @@ from wagtailthemes.models import ThemeSettings
 
 @pytest.fixture
 def page():
-    page = Page.objects.get(slug='home')
+    page = Page.objects.get(slug="home")
     return page
 
 
