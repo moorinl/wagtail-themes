@@ -22,7 +22,7 @@ test_requires = [
 
 setup(
     name='wagtail-themes',
-    version='0.4.0',
+    version='0.5.0rc1',
     description='Site specific theme loader for Django Wagtail.',
     author='Rob Moorman',
     author_email='rob@moori.nl',
