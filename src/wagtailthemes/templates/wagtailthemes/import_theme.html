@@ -1,0 +1,38 @@
+{% extends "wagtailadmin/base.html" %}
+
+{% load i18n wagtailadmin_tags %}
+
+{% block titletag %}{% trans "Import theme" %}{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Import theme" %}
+    <div class="nice-padding">
+        <div class="help-block help-info">
+            {% blocktrans %}
+                <p>Please note that all contents will be replaced when you upload the <code>.zip</code> file. Ideally you export theme first, apply your changes to these files and upload them in a new <code>.zip</code> file.</p>
+            {% endblocktrans %}
+        </div>
+        {% include "wagtailadmin/shared/non_field_errors.html" %}
+        <form action="{% url 'wagtailthemes_import_theme' %}" method="POST" enctype="multipart/form-data" novalidate>
+            {% csrf_token %}
+            <ul class="fields">
+                {% for field in form %}
+                    {% include "wagtailadmin/shared/field_as_li.html" %}
+                {% endfor %}
+                <li><input type="submit" value="{% trans 'Import' %}" class="button" /></li>
+            </ul>
+        </form>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    {% include "wagtailadmin/pages/_editor_css.html" %}
+    {{ form_media.css }}
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+    {% include "wagtailadmin/pages/_editor_js.html" %}
+    {{ form_media.js }}
+{% endblock %}

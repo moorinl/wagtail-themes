@@ -1,0 +1,39 @@
+{% extends "wagtailadmin/base.html" %}
+
+{% load i18n wagtailadmin_tags %}
+
+{% block titletag %}{% trans "Export theme" %}{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Export theme" %}
+    <div class="nice-padding">
+        <div class="help-block help-info">
+            {% blocktrans %}
+                <p>By pressing the export button you will download a <code>.zip</code> file including all the templates related to the selected theme.</p>
+                <p>You can use the same <code>.zip</code> file for importing the templates into your theme.</p>
+            {% endblocktrans %}
+        </div>
+        {% include "wagtailadmin/shared/non_field_errors.html" %}
+        <form action="{% url 'wagtailthemes_export_theme' %}" method="POST" novalidate>
+            {% csrf_token %}
+            <ul class="fields">
+                {% for field in form %}
+                    {% include "wagtailadmin/shared/field_as_li.html" %}
+                {% endfor %}
+                <li><input type="submit" value="{% trans 'Export' %}" class="button" /></li>
+            </ul>
+        </form>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    {% include "wagtailadmin/pages/_editor_css.html" %}
+    {{ form_media.css }}
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+    {% include "wagtailadmin/pages/_editor_js.html" %}
+    {{ form_media.js }}
+{% endblock %}
