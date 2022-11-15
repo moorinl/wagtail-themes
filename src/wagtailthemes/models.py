@@ -3,13 +3,13 @@ from django.conf import settings
 from django.db import models
 from django.utils.translation import gettext as _
 from wagtail.admin.edit_handlers import FieldPanel
-from wagtail.contrib.settings.models import BaseSetting, register_setting
+from wagtail.contrib.settings.models import BaseSiteSetting, register_setting
 
 __ALL__ = ["ThemeSettings"]
 
 
 @register_setting
-class ThemeSettings(BaseSetting):
+class ThemeSettings(BaseSiteSetting):
     THEMES = getattr(settings, "WAGTAIL_THEMES", None)
 
     id = models.AutoField(
