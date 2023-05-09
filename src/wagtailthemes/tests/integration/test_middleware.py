@@ -1,7 +1,7 @@
 import pytest
 from django.core.exceptions import ImproperlyConfigured
 from django.test.utils import override_settings
-from wagtail.core.models import Site
+from wagtail.models import Site
 
 from wagtailthemes.thread import get_theme, set_theme
 
