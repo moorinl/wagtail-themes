@@ -2,6 +2,7 @@
 
 Site specific theme loader for Django Wagtail.
 
+[![Version](https://img.shields.io/pypi/v/wagtail-themes.svg?style=flat)](https://pypi.python.org/pypi/wagtail-themes/)
 [![Build Status](https://github.com/moorinl/wagtail-themes/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/moorinl/wagtail-themes/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/moorinteractive/wagtail-themes/badge.svg?branch=master)](https://coveralls.io/github/moorinteractive/wagtail-themes?branch=master)
 
