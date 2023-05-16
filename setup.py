@@ -35,14 +35,13 @@ setup(
         'Framework :: Django',
         'Operating System :: Unix',
         'Framework :: Wagtail',
-        'Framework :: Wagtail :: 2',
         'Framework :: Wagtail :: 3',
         'Framework :: Wagtail :: 4',
+        'Framework :: Wagtail :: 5',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
     ]
 )

@@ -3,7 +3,7 @@ from django.conf import settings
 from django.db import models
 from django.utils.translation import gettext as _
 from wagtail import VERSION as WAGTAIL_VERSION
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.admin.panels import FieldPanel
 from wagtail.contrib.settings.models import register_setting
 
 if WAGTAIL_VERSION < (4, 0):

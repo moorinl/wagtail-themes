@@ -1,5 +1,5 @@
 from django.core.exceptions import ImproperlyConfigured
-from wagtail.core.models import Site
+from wagtail.models import Site
 
 from wagtailthemes.models import ThemeSettings
 from wagtailthemes.thread import set_theme
